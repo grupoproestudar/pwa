@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ title }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content color="medium" padding>
+  <ion-item color="medium" *ngIf="members.length > 0">
+    <ion-label>Professor:</ion-label>
+    <ion-select [compareWith]="compareWithFn" [(ngModel)]="member">
+      <ion-select-option *ngFor="let member of members">{{member}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item color="medium">
+  <ion-label>Avaliação:</ion-label>
+  <rating (rateChange)="onRateChange($event)">
+  </rating >
+  </ion-item>
+  <ion-item color="medium">
+    <ion-label position="stacked">Descreva seu feedback abaixo:</ion-label>
+    <ion-textarea [(ngModel)]="feedback" rows="7" cols="30" maxlength="280" text-center></ion-textarea>
+  </ion-item>
+  <ion-button color="primary" (click) = "submit()" expand="full" shape="round">Enviar</ion-button>
+  <ion-button color="warning" (click) = "clear()" expand="full" shape="round">Cancelar</ion-button>
+</ion-content>
+<ion-footer color="medium">
+  <ion-toolbar color="medium" text-center>
+    <ion-label>
+      Copyright © Grupo Pró - Estudar
+    </ion-label>
+  </ion-toolbar>
+</ion-footer>

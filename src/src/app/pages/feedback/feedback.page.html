@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Aulas</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content color="medium">
+  <ion-button *ngFor="let group of groups | async" expand="block" shape="round" 
+      (click)="redirectTo(group)">{{group.description}}</ion-button>
+</ion-content>

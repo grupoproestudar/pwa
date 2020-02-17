@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>GPE APP</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding color="medium">
+    <ion-text color="primary">
+        <p>
+          Selecione para quem deseja dar um feedback.
+        </p>
+      </ion-text>
+  <ion-button *ngFor="let config of settings | async" expand="block" shape="round"
+    (click)="redirectTo(config)">{{config.title}}</ion-button>
+</ion-content>
