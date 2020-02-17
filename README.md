@@ -1,4 +1,4 @@
-## O "Pró - Estudar Feedback App" é um projeto open-source utilizando VueJs :sunglasses:
+## O "Pró - Estudar Feedback App" é um projeto open-source utilizando Ionic :sunglasses:
 
 * O objetivo do projeto é criar uma pwa pare recolhimento de feedbacks dos alunos do cursinho popular Pró - Estudar situado na cidade de Matão - SP.
   
